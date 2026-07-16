@@ -1,16 +1,18 @@
-## Hi there 👋
+# 🌍 Nurdan Around the World
 
-<!--
-**nurdanaroundtheworld/nurdanaroundtheworld** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+> Collecting Moments.
 
-Here are some ideas to get you started:
+Welcome to the official repository of **Nurdan Around the World**.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+This project is a personal travel journal sharing stories, photography, culture, and unforgettable experiences from around the globe.
+
+## ✈️ Coming Soon
+
+- 🌍 Interactive World Map
+- 📸 Travel Photography
+
+- 📝 Travel Stories
+
+---
+
+*"Every journey deserves a story."*
