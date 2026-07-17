@@ -1,298 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nurdan Around The World</title>
 
-  <title>Nurdan Around The World</title>
+<style>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    html,
-    body {
-      margin: 0;
-      width: 100%;
-      min-height: 100%;
-    }
+body{
+    font-family:Arial,sans-serif;
+    background:url("images/Nurdanindia.jpeg") center center/cover no-repeat;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    text-align:center;
+    position:relative;
+}
 
-    body {
-      min-height: 100vh;
-      min-height: 100svh;
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.35);
+}
 
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
+.container{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:700px;
+    padding:30px;
+}
 
-      background-image: url("images/Nurdanindia.jpeg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+.travel-logo{
+    width:95px;
+    margin:0 auto 18px;
+}
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+.travel-logo svg{
+    width:100%;
+    display:block;
+}
 
-      position: relative;
-    }
+.orbit{
+    fill:none;
+    stroke:#fff;
+    stroke-width:3;
+    stroke-dasharray:8 8;
+}
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.35);
-      z-index: 0;
-    }
+.earth{
+    fill:rgba(255,255,255,.05);
+    stroke:#fff;
+    stroke-width:3;
+}
 
-    .container {
-      position: relative;
-      z-index: 1;
+.continent,
+.plane{
+    fill:#fff;
+}
 
-      width: 100%;
-      max-width: 700px;
-      padding: 30px 22px;
+h1{
+    font-size:22px;
+    font-weight:400;
+    margin-bottom:18px;
+}
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+.countries{
+    font-size:18px;
+    margin-bottom:16px;
+}
 
-    .travel-logo {
-      width: 115px;
-      height: 115px;
-      margin-bottom: 18px;
-    }
+.tagline{
+    font-size:18px;
+    font-style:italic;
+    line-height:1.5;
+    margin-bottom:42px;
+}
 
-    .travel-logo svg {
-      display: block;
-      width: 100%;
-      height: 100%;
-      overflow: visible;
-    }
+.message{
+    font-size:18px;
+    line-height:1.5;
+    margin-bottom:40px;
+}
 
-    .orbit {
-      fill: none;
-      stroke: white;
-      stroke-width: 3;
-      stroke-dasharray: 8 7;
-      stroke-linecap: round;
-    }
+.button{
+    display:inline-block;
+    color:#fff;
+    text-decoration:none;
+    border:2px solid #fff;
+    border-radius:45px;
+    padding:16px 44px;
+    font-size:18px;
+    font-weight:bold;
+}
 
-    .earth {
-      fill: rgba(255, 255, 255, 0.08);
-      stroke: white;
-      stroke-width: 3;
-    }
+@media(max-width:600px){
 
-    .continent,
-    .plane {
-      fill: white;
-    }
+.container{
+padding:20px;
+}
 
-    h1 {
-      margin: 0 0 24px;
-      font-size: 42px;
-      font-weight: 400;
-      line-height: 1.15;
-    }
+.travel-logo{
+width:85px;
+margin-bottom:14px;
+}
 
-    .countries {
-      margin: 0 0 22px;
-      font-size: 30px;
-    }
+h1{
+font-size:20px;
+}
 
-    .tagline {
-      margin: 0 0 70px;
-      font-size: 30px;
-      line-height: 1.45;
-      font-style: italic;
-    }
+.countries{
+font-size:16px;
+}
 
-    .message {
-      margin: 0 0 52px;
-      font-size: 29px;
-      line-height: 1.55;
-    }
+.tagline{
+font-size:16px;
+}
 
-    .button {
-      display: inline-block;
-      min-width: 335px;
-      padding: 24px 34px;
+.message{
+font-size:16px;
+}
 
-      color: white;
-      text-decoration: none;
-      font-size: 27px;
-      font-weight: bold;
+.button{
+font-size:18px;
+padding:15px 40px;
+}
 
-      border: 3px solid white;
-      border-radius: 60px;
-    }
+}
 
-    @media (max-width: 600px) {
-      body {
-        background-attachment: scroll;
-      }
+</style>
 
-      .container {
-        padding: 24px 18px;
-      }
-
-      .travel-logo {
-        width: 105px;
-        height: 105px;
-        margin-bottom: 16px;
-      }
-
-      h1 {
-        margin-bottom: 24px;
-        font-size: 39px;
-      }
-
-      .countries {
-        margin-bottom: 20px;
-        font-size: 29px;
-      }
-
-      .tagline {
-        margin-bottom: 62px;
-        font-size: 28px;
-        line-height: 1.5;
-      }
-
-      .message {
-        margin-bottom: 50px;
-        font-size: 28px;
-      }
-
-      .button {
-        min-width: 0;
-        width: 90%;
-        max-width: 340px;
-        padding: 22px 24px;
-        font-size: 25px;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
-  <main class="container">
+<div class="container">
 
-    <div class="travel-logo" aria-label="Travel globe">
-      <svg viewBox="0 0 200 200" role="img">
+<div class="travel-logo">
 
-        <circle
-          class="orbit"
-          cx="100"
-          cy="100"
-          r="74">
-        </circle>
+<svg viewBox="0 0 200 200">
 
-        <circle
-          class="earth"
-          cx="100"
-          cy="100"
-          r="52">
-        </circle>
+<circle class="orbit" cx="100" cy="100" r="72"/>
 
-        <!-- Europe and Asia -->
-        <path
-          class="continent"
-          d="M64 67
-             L75 55
-             L90 51
-             L101 57
-             L114 55
-             L128 63
-             L137 74
-             L126 79
-             L114 75
-             L104 82
-             L91 78
-             L80 81
-             L71 75 Z">
-        </path>
+<circle class="earth" cx="100" cy="100" r="52"/>
 
-        <!-- Africa -->
-        <path
-          class="continent"
-          d="M78 84
-             L94 80
-             L108 88
-             L111 102
-             L103 115
-             L98 132
-             L87 142
-             L80 128
-             L69 115
-             L66 101 Z">
-        </path>
+<path class="continent" d="M66 67 L78 56 L92 54 L101 60 L113 58 L126 66 L118 74 L106 74 L98 82 L86 80 L77 73 Z"/>
 
-        <!-- Asia -->
-        <path
-          class="continent"
-          d="M112 81
-             L128 75
-             L143 82
-             L151 94
-             L143 105
-             L129 103
-             L119 95 Z">
-        </path>
+<path class="continent" d="M79 86 L94 82 L106 90 L108 103 L100 116 L95 132 L86 140 L78 126 L69 113 L68 100 Z"/>
 
-        <!-- Australia -->
-        <path
-          class="continent"
-          d="M125 116
-             L139 113
-             L148 122
-             L141 135
-             L127 132
-             L119 123 Z">
-        </path>
+<path class="continent" d="M113 82 L128 77 L141 84 L147 95 L140 106 L127 103 L119 94 Z"/>
 
-        <!-- Plane -->
-        <path
-          class="plane"
-          d="M145 31
-             L154 43
-             L174 35
-             L181 41
-             L162 55
-             L167 72
-             L159 76
-             L150 62
-             L139 70
-             L133 65
-             L143 53
-             L132 42 Z">
-        </path>
+<path class="continent" d="M124 116 L138 114 L145 122 L139 133 L126 130 L120 122 Z"/>
 
-      </svg>
-    </div>
+<path class="plane" d="M145 34 L154 45 L174 38 L180 43 L162 57 L167 73 L160 77 L151 64 L141 71 L136 67 L144 55 L133 44 Z"/>
 
-    <h1>Nurdan Around The World</h1>
+</svg>
 
-    <p class="countries">56 Countries</p>
+</div>
 
-    <p class="tagline">
-      Where Every Journey Becomes<br>
-      a Memory
-    </p>
+<h1>Nurdan Around The World</h1>
 
-    <p class="message">
-      A new adventure is about to<br>
-      begin.
-    </p>
+<div class="countries">
+56 Countries
+</div>
 
-    <a class="button" href="#">
-      Launching Soon
-    </a>
+<div class="tagline">
+Where Every Journey Becomes<br>
+a Memory
+</div>
 
-  </main>
+<div class="message">
+A new adventure is about to<br>
+begin.
+</div>
+
+<a href="#" class="button">
+Launching Soon
+</a>
+
+</div>
 
 </body>
 </html>
